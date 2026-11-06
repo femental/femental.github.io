@@ -47,19 +47,30 @@ a { text-decoration: none; }
 
 .skills div { grid-template-columns: 12mm 1fr; gap: 3mm; }
 
+.projects__lead { margin-bottom: 7mm; }
+
 /* 프로젝트: 한 프로젝트가 페이지 중간에서 잘리지 않게 */
 .project { break-inside: avoid; page-break-inside: avoid; }
+/* 캡처가 있는 프로젝트는 길어서, 블록 단위로만 다음 페이지로 넘어갈 수 있게 */
+.project:has(.shot) { break-inside: auto; page-break-inside: auto; }
+.project__summary, .facts, .story__head { break-after: avoid; page-break-after: avoid; }
+.story__block { break-inside: avoid; page-break-inside: avoid; }
 /* 점선 구분선은 페이지가 넘어가면 새 페이지 맨 위에 혼자 남아서, 인쇄에선 여백으로만 구분 */
 .project + .project { margin-top: 9mm; padding-top: 0; border-top: 0; }
 .project__title { font-size: 13pt; }
 .project__period, .facts, .project__links { font-size: 8.5pt; }
 .facts { margin-top: 1mm; gap: 1mm 6mm; }
 .project__summary { margin-top: 2.5mm; }
+.shot { margin-top: 3mm; break-inside: avoid; }
+.shot img { border-radius: 3pt; }
+.shot figcaption { margin-top: 1.5mm; font-size: 8pt; }
 
-.adr { margin-top: 3mm; border-top-width: 1.5pt; }
-.adr__col { padding: 2.5mm 3.5mm 3mm; font-size: 8.75pt; line-height: 1.55; }
-.adr__head { font-size: 8pt; margin-bottom: 1mm; }
-.metric { font-size: 12pt; }
+.story { margin-top: 4mm; border-top-width: 1.5pt; }
+.story__block { padding: 3mm 0 3.5mm; }
+.story__block--result { padding: 3mm 4mm 3.5mm; }
+.story__head { font-size: 8pt; margin-bottom: 1mm; }
+.story li + li { margin-top: 0.8mm; }
+.metric { font-size: 12pt; margin-bottom: 1mm; }
 .project__links { margin-top: 2.5mm; }
 
 .colophon { padding-top: 4mm; font-size: 7.5pt; }

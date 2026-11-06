@@ -42,98 +42,55 @@
 
     <!-- ===== 프로젝트 =====
          새 프로젝트는 <article class="project"> 블록을 통째로 복사하세요.
-         성과 칸의 <strong class="metric">에는 가장 중요한 숫자 하나만 넣으세요. -->
+         성과의 <p class="metric">에는 가장 중요한 숫자나 변화 하나만 넣으세요. -->
     <section class="row" id="projects">
-      <h2 class="row__label">프로젝트</h2>
+      <h2 class="row__label">AX 프로젝트</h2>
       <div class="row__body">
 
-        <article class="project">
-          <header class="project__head">
-            <h3 class="project__title">프로젝트 A</h3>
-            <p class="project__period">2025.03–2025.08</p>
-          </header>
-          <dl class="facts">
-            <div><dt>팀</dt><dd>4명</dd></div>
-            <div><dt>역할</dt><dd>백엔드</dd></div>
-            <div><dt>기술</dt><dd>Spring Boot, MySQL, AWS EC2</dd></div>
-          </dl>
-          <p class="project__summary">어떤 사용자의 어떤 문제를 푸는 서비스인지 한두 문장으로 적으세요.</p>
-          <div class="adr">
-            <section class="adr__col">
-              <h4 class="adr__head">배경</h4>
-              <p>왜 이 프로젝트를 했고 무엇이 문제였는지 적으세요. 예: 주문이 몰리면 결제 API가 3초 이상 걸렸다.</p>
-            </section>
-            <section class="adr__col">
-              <h4 class="adr__head">내가 한 일</h4>
-              <p>내가 맡은 부분과, 그 방법을 고른 이유를 적으세요.</p>
-            </section>
-            <section class="adr__col adr__col--result">
-              <h4 class="adr__head">성과</h4>
-              <p><strong class="metric">3.1s → 0.4s</strong> 피크 시간 결제 응답</p>
-            </section>
-          </div>
-          <p class="project__links">
-            <a href="https://github.com/femental">github.com/femental/project-a</a>
-          </p>
-        </article>
+        <div class="projects__lead prose">
+          <p>AI 시대에는 개발 능력보다 AI 전환(AX)이 필요한 곳을 찾아내는 능력이 더 중요하다고 생각합니다. 그 능력은 엔지니어링 지식 위에 쌓인 경험과 소통에서 나옵니다.</p>
+          <p>사업을 직접 운영해 본 경험 덕분에 다른 부서의 병목을 넓게 봅니다. 고객사 컨설팅 업무를 하며 현업의 요구를 듣고 정리하는 소통 능력을 키웠습니다.</p>
+        </div>
 
+        <!-- TODO: 기간, 팀, 역할, 기술을 채워 주세요. -->
         <article class="project">
           <header class="project__head">
-            <h3 class="project__title">프로젝트 B</h3>
-            <p class="project__period">2024.09–2024.12</p>
+            <h3 class="project__title">영업 효율화 및 전략 데이터 추출 시스템</h3>
+            <p class="project__period">기간 입력</p>
           </header>
           <dl class="facts">
-            <div><dt>팀</dt><dd>개인</dd></div>
-            <div><dt>기술</dt><dd>Next.js, TypeScript, Vercel</dd></div>
+            <div><dt>팀</dt><dd>입력</dd></div>
+            <div><dt>역할</dt><dd>입력</dd></div>
+            <div><dt>기술</dt><dd>입력</dd></div>
           </dl>
-          <p class="project__summary">어떤 사용자의 어떤 문제를 푸는 서비스인지 한두 문장으로 적으세요.</p>
-          <div class="adr">
-            <section class="adr__col">
-              <h4 class="adr__head">배경</h4>
-              <p>왜 이 프로젝트를 했고 무엇이 문제였는지 적으세요.</p>
+          <p class="project__summary">영업 담당자가 지금 있는 곳 주변의 고객사를 지도에서 찾고, 상태와 방문 히스토리를 바로 확인하는 사내 고객 관리 서비스입니다.</p>
+          <div class="story">
+            <section class="story__block">
+              <h4 class="story__head">배경</h4>
+              <p>영업 담당자는 신규·기존 고객사를 방문한 김에 근처의 기존 고객사도 관리차 들르고 싶어 했습니다. 하지만 고객사를 각자 네이버 지도에 직접 등록해 두고 위치를 확인하고 있었습니다.</p>
             </section>
-            <section class="adr__col">
-              <h4 class="adr__head">내가 한 일</h4>
-              <p>내가 맡은 부분과 그 이유를 적으세요.</p>
+            <section class="story__block">
+              <h4 class="story__head">내가 한 일</h4>
+              <ul>
+                <li>현재 위치 기준 반경 안의 고객사를 지도와 목록으로 보여주는 웹 서비스 개발</li>
+                <li>가입자·잠재고객, 업종, 진행 상태로 고객사를 거르는 필터</li>
+                <li>주소를 좌표로 바꾸는 변환, 아웃바운드 대상 추출, 방문 일지 기능 추가</li>
+              </ul>
             </section>
-            <section class="adr__col adr__col--result">
-              <h4 class="adr__head">성과</h4>
-              <p><strong class="metric">1,200명</strong> 첫 달 가입자</p>
+            <section class="story__block story__block--result">
+              <h4 class="story__head">성과</h4>
+              <p class="metric">수동 등록 → 자동 조회</p>
+              <ul>
+                <li>개인별 네이버 지도 관리를 전사 공용 고객 지도로 전환</li>
+                <li>외근 중에도 고객사 정보, 담당자, 히스토리를 바로 확인</li>
+              </ul>
             </section>
           </div>
-          <p class="project__links">
-            <a href="https://github.com/femental">github.com/femental/project-b</a>
-          </p>
-        </article>
-
-        <article class="project">
-          <header class="project__head">
-            <h3 class="project__title">프로젝트 C</h3>
-            <p class="project__period">2024.03–2024.06</p>
-          </header>
-          <dl class="facts">
-            <div><dt>팀</dt><dd>3명</dd></div>
-            <div><dt>역할</dt><dd>풀스택</dd></div>
-            <div><dt>기술</dt><dd>React, Node.js, MongoDB</dd></div>
-          </dl>
-          <p class="project__summary">어떤 사용자의 어떤 문제를 푸는 서비스인지 한두 문장으로 적으세요.</p>
-          <div class="adr">
-            <section class="adr__col">
-              <h4 class="adr__head">배경</h4>
-              <p>왜 이 프로젝트를 했고 무엇이 문제였는지 적으세요.</p>
-            </section>
-            <section class="adr__col">
-              <h4 class="adr__head">내가 한 일</h4>
-              <p>내가 맡은 부분과 그 이유를 적으세요.</p>
-            </section>
-            <section class="adr__col adr__col--result">
-              <h4 class="adr__head">성과</h4>
-              <p><strong class="metric">−60%</strong> 매일 밤 배치 실행 시간</p>
-            </section>
-          </div>
-          <p class="project__links">
-            <a href="https://github.com/femental">github.com/femental/project-c</a>
-          </p>
+          <figure class="shot">
+            <img src="assets/client-map.webp" width="1902" height="832"
+                 alt="고객 관리 서비스의 '내 주변 고객' 화면. 지도에 반경 3km 원과 고객사 핀이 있고, 오른쪽에 거리순 고객사 목록, 가운데에 고객사 상세 정보 팝업이 열려 있다.">
+            <figcaption>내 주변 고객 화면. 반경 안의 고객사를 거리순으로 보여주고, 핀을 누르면 상태·담당·유형을 확인하고 바로 길찾기를 할 수 있습니다. 고객 정보는 가렸습니다.</figcaption>
+          </figure>
         </article>
 
       </div>

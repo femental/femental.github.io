@@ -128,7 +128,7 @@ a:focus-visible { outline: 2px solid var(--outcome); outline-offset: 2px; border
 }
 
 .prose { max-width: 38em; }
-.prose p, .project__summary, .adr__col p { text-wrap: pretty; }
+.prose p, .project__summary, .story p, .story li { text-wrap: pretty; }
 .prose p + p { margin-top: 0.85rem; }
 
 /* ---------- 기술 ---------- */
@@ -137,6 +137,8 @@ a:focus-visible { outline: 2px solid var(--outcome); outline-offset: 2px; border
 .skills dt { color: var(--graphite); }
 
 /* ---------- 프로젝트 ---------- */
+.projects__lead { margin-bottom: 2.5rem; }
+
 .project + .project {
   margin-top: 2.75rem;
   padding-top: 2.75rem;
@@ -165,30 +167,49 @@ a:focus-visible { outline: 2px solid var(--outcome); outline-offset: 2px; border
 
 .project__summary { margin-top: 1rem; max-width: 40em; }
 
-/* 문제 | 해결 | 결과 — 이 페이지에서 유일하게 힘을 준 요소 */
-.adr {
-  margin-top: 1.25rem;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+/* 프로젝트 화면 캡처 */
+.shot { margin: 1.25rem 0 0; }
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+}
+.shot figcaption {
+  margin-top: 0.5rem;
+  color: var(--graphite);
+  font-size: var(--fs-sm);
+  text-wrap: pretty;
+}
+
+/* 배경 → 내가 한 일 → 성과: 위에서 아래로 읽어요 */
+.story {
+  margin-top: 1.5rem;
   border-top: 2px solid var(--ink);
+}
+.story__block {
+  padding: 1rem 0 1.1rem;
   border-bottom: 1px solid var(--rule);
 }
-.adr__col {
-  padding: 0.85rem 1.1rem 1rem;
-  font-size: 0.9375rem;
-  line-height: 1.65;
-}
-.adr__col + .adr__col { border-left: 1px solid var(--rule); }
-.adr__col:first-child { padding-left: 0; }
-.adr__head {
+.story__head {
   font-size: var(--fs-sm);
   font-weight: 600;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.4rem;
 }
-.adr__col--result { background: var(--wash); }
-.adr__col--result .adr__head { color: var(--outcome); }
+.story p, .story ul { max-width: 42em; }
+.story ul { margin: 0; padding-left: 1.15rem; }
+.story li + li { margin-top: 0.3rem; }
+.story li::marker { color: var(--graphite); }
+
+.story__block--result {
+  padding: 1rem 1.25rem 1.2rem;
+  background: var(--wash);
+  border-bottom: 0;
+}
+.story__block--result .story__head { color: var(--outcome); }
 .metric {
-  display: block;
+  margin-bottom: 0.4rem;
   font-size: var(--fs-md);
   font-weight: 700;
   color: var(--outcome);
@@ -221,10 +242,7 @@ a:focus-visible { outline: 2px solid var(--outcome); outline-offset: 2px; border
 /* ---------- 태블릿 이하: 왼쪽 여백 칸을 위로 ---------- */
 @media screen and (max-width: 760px) {
   .row { grid-template-columns: minmax(0, 1fr); row-gap: 1rem; padding: 2rem 0; }
-  .adr { grid-template-columns: minmax(0, 1fr); }
-  .adr__col, .adr__col:first-child { padding: 0.85rem 0; }
-  .adr__col + .adr__col { border-left: 0; border-top: 1px solid var(--rule); }
-  .adr__col--result { padding: 0.85rem 1rem; }
+  .story__block--result { padding: 0.9rem 1rem 1rem; }
 }
 
 @media screen and (max-width: 480px) {

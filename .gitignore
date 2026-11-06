@@ -1,0 +1,7 @@
+node_modules/
+# PDF는 GitHub Actions가 배포할 때 만들어요. 로컬에서 만든 건 커밋하지 않아요.
+portfolio.pdf
+_site/
+
+# 로컬 미리보기 설정 (이 PC 경로가 들어 있어요)
+.claude/

@@ -1,0 +1,67 @@
+/* =========================================================
+   PDF(인쇄)용 스타일 — style.css 위에 덮어써요.
+   index.html에서 media="print"로만 불러와요.
+   ========================================================= */
+@page {
+  size: A4;
+  margin: 16mm 17mm 16mm;
+}
+
+/* 인쇄는 항상 밝은 테마 */
+:root, :root:not([data-theme="light"]) {
+  --paper:    #ffffff;
+  --ink:      #1c2128;
+  --graphite: #50585f;
+  --rule:     #cfd3d9;
+  --wash:     #f2f4f5;
+  --outcome:  #0b7a55;
+  --link:     #1c2128;
+  --label-w:  24mm;
+}
+
+body {
+  font-size: 9.5pt;
+  line-height: 1.6;
+  -webkit-print-color-adjust: exact;   /* 결과 칸 배경색 유지 */
+  print-color-adjust: exact;
+}
+
+.no-print { display: none !important; }
+
+/* 종이에서는 밑줄 없이, 주소 자체가 링크 텍스트 */
+a { text-decoration: none; }
+
+.doc { max-width: none; padding: 0; }
+
+/* 첫 화면 */
+.intro { padding-bottom: 7mm; }
+.intro__name { font-size: 30pt; }
+.intro__lede { margin-top: 3mm; font-size: 12pt; max-width: 32em; }
+.contact { margin-top: 5mm; font-size: 8.5pt; gap: 1mm 8mm; }
+
+/* 섹션 */
+.row { column-gap: 6mm; padding: 6mm 0; }
+.row__label { font-size: 9.5pt; }
+/* 섹션 이름이 페이지 맨 아래에 혼자 남지 않게 */
+.row__label, .project__head { break-after: avoid; page-break-after: avoid; }
+
+.skills div { grid-template-columns: 12mm 1fr; gap: 3mm; }
+
+/* 프로젝트: 한 프로젝트가 페이지 중간에서 잘리지 않게 */
+.project { break-inside: avoid; page-break-inside: avoid; }
+/* 점선 구분선은 페이지가 넘어가면 새 페이지 맨 위에 혼자 남아서, 인쇄에선 여백으로만 구분 */
+.project + .project { margin-top: 9mm; padding-top: 0; border-top: 0; }
+.project__title { font-size: 13pt; }
+.project__period, .facts, .project__links { font-size: 8.5pt; }
+.facts { margin-top: 1mm; gap: 1mm 6mm; }
+.project__summary { margin-top: 2.5mm; }
+
+.adr { margin-top: 3mm; border-top-width: 1.5pt; }
+.adr__col { padding: 2.5mm 3.5mm 3mm; font-size: 8.75pt; line-height: 1.55; }
+.adr__head { font-size: 8pt; margin-bottom: 1mm; }
+.metric { font-size: 12pt; }
+.project__links { margin-top: 2.5mm; }
+
+.colophon { padding-top: 4mm; font-size: 7.5pt; }
+
+p, li { orphans: 3; widows: 3; }

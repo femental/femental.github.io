@@ -137,7 +137,6 @@ a:focus-visible { outline: 2px solid var(--outcome); outline-offset: 2px; border
 .skills dt { color: var(--graphite); }
 
 /* ---------- 프로젝트 ---------- */
-.projects__lead { margin-bottom: 2.5rem; }
 
 .project + .project {
   margin-top: 2.75rem;
@@ -216,6 +215,12 @@ a:focus-visible { outline: 2px solid var(--outcome); outline-offset: 2px; border
   letter-spacing: -0.01em;
   font-variant-numeric: tabular-nums;
   line-height: 1.35;
+}
+
+.result + .result {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
 }
 
 .project__links {

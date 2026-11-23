@@ -47,8 +47,6 @@ a { text-decoration: none; }
 
 .skills div { grid-template-columns: 12mm 1fr; gap: 3mm; }
 
-.projects__lead { margin-bottom: 7mm; }
-
 /* 프로젝트: 한 프로젝트가 페이지 중간에서 잘리지 않게 */
 .project { break-inside: avoid; page-break-inside: avoid; }
 /* 캡처가 있는 프로젝트는 길어서, 블록 단위로만 다음 페이지로 넘어갈 수 있게 */
@@ -71,6 +69,7 @@ a { text-decoration: none; }
 .story__head { font-size: 8pt; margin-bottom: 1mm; }
 .story li + li { margin-top: 0.8mm; }
 .metric { font-size: 12pt; margin-bottom: 1mm; }
+.result + .result { margin-top: 3mm; padding-top: 3mm; }
 .project__links { margin-top: 2.5mm; }
 
 .colophon { padding-top: 4mm; font-size: 7.5pt; }

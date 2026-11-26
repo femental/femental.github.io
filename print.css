@@ -68,6 +68,9 @@ a { text-decoration: none; }
 .story__block--result { padding: 3mm 4mm 3.5mm; }
 .story__head { font-size: 8pt; margin-bottom: 1mm; }
 .story li + li { margin-top: 0.8mm; }
+.story p + p { margin-top: 1.5mm; }
+.story__role { margin-bottom: 1.5mm; }
+.story .work li { grid-template-columns: 18mm minmax(0, 1fr); gap: 2mm; }
 .metric { font-size: 12pt; margin-bottom: 1mm; }
 .result + .result { margin-top: 3mm; padding-top: 3mm; }
 .project__links { margin-top: 2.5mm; }
